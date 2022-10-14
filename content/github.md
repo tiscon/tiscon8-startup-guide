@@ -7,4 +7,4 @@ GitHubはシステムエンジニアのSNSであり、GitHubアカウントはSE
 例年、登録したユーザー名/パスワードを忘れてしまう方がいらっしゃいます。  
 インターンシップ当日に思い出せるよう必要に応じてメモをとるなどの対応をしてください。
 
-**[GitHub アカウントの作成方法](https://qiita.com/okumurakengo/items/848f7177765cf25fcde0)**
+**[GitHub アカウントの作成方法](https://pengi-n.co.jp/blog/github-account/)**
