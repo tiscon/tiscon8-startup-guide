@@ -4,7 +4,7 @@
 本アプリケーションはアプリケーションフレームワーク『Spring Boot』を使用して構成されています。
 Spring Bootについて学びたい方は、以下を参考にしてください。
 
--[Spring Boot Reference Documentation](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/)
+- [Spring Boot Reference Documentation](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/)
 
 ## Java API
 Javaで提供している標準のAPIです。
