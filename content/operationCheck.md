@@ -33,7 +33,7 @@
 ### 2.Gitpodのログイン
 
 1. 以下にアクセスし、 `Continue with GitHub` を押下します。
-   1. https://gitpod.io/  
+   1. https://gitpod.io/login  
 ![Login Gitpod](../image/gitpod_access.png)
 1. GitHubへのログインやアクセス権の付与を求められた場合は、従ってください。
 ![Authorize gitpod.io](../image/gitpod_authorize-gitpodio.png)
@@ -57,7 +57,7 @@
 
 ### 4.Webアプリケーションの起動確認
 
-1. 画面下部のTerminal画面に `Started InternApplication` と表示されていることを確認します。異なる表示がされている場合は、手順4-1-1に進んでください。
+1. 画面下部のTerminal画面に `Started InternApplication` と表示されていることを確認します。異なる表示がされている場合は、次の手順に進んでください。
 ![Confirm Boot](../image/gitpod_confirm-boot.png)
    1. 以下のように `ZipException` と表示されている場合は以下手順に従ってください。異なる表示がされている場合は、問い合わせ手順に従ってご連絡ください。
 ![ZipException](../image/gitpod_zip-exception.png)
