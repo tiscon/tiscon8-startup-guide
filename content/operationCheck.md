@@ -2,15 +2,13 @@
 
 ## 手順
 
+本手順において、画面キャプチャ内の「tiscon8-pre」は「tiscon8」に読み替えてください。
+
 1. [GitHubリポジトリのFork](#1githubリポジトリのfork)
 1. [Gitpodのログイン](#2gitpodのログイン)
 1. [Workspaceの作成](#3workspaceの作成)
 1. [Webアプリケーションの起動確認](#4webアプリケーションの起動確認)
 1. [Webアプリケーションの終了](#5webアプリケーションの終了)
-
-## 補足
-
-本手順において、画面キャプチャ内の「tiscon8-pre」は「tiscon8」に読み替えてください。
 
 ### 1.GitHubリポジトリのFork
 
