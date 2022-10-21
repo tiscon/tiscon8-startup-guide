@@ -1,10 +1,10 @@
 # 使用している技術について
 
-## Spring Framework
-本アプリケーションはアプリケーションフレームワーク『Spring Framework』(Spring)を使用して構成されています。<br>
-Springについて学びたい方は、以下を参考にしてください。
+## Spring Boot
+本アプリケーションはアプリケーションフレームワーク『Spring Boot』を使用して構成されています。
+Spring Bootについて学びたい方は、以下を参考にしてください。
 
--[Spring Boot Reference Documentation](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/)
+- [Spring Boot Reference Documentation](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/)
 
 ## Java API
 Javaで提供している標準のAPIです。

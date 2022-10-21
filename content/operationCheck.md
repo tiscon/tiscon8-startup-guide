@@ -1,154 +1,108 @@
 # 動作確認
 
-## 前提条件(Windows)
-
-* [コマンドプロンプトを起動](tipsForWin.md#コマンドプロンプトの起動方法)して `java -version` とコマンドを入力した時、結果が返ってきますか？
-* [コマンドプロンプトを起動](tipsForWin.md#コマンドプロンプトの起動方法)して `git --version` とコマンドを入力した時、結果が返ってきますか？
-
-## 前提条件(Mac)
-
-* [Terminalを起動](tipsForMac.md#terminalの起動方法)して `java -version` とコマンドを入力した時、結果が返ってきますか？
-* [Terminalを起動](tipsForMac.md#terminalの起動方法)して `git --version` とコマンドを入力した時、結果が返ってきますか？
-
 ## 手順
-1. IntelliJの実行
-2. IntelliJでプロジェクトをcloneする
-3. ソースコード確認
-4. Gitの設定
-5. SDKの設定
-6. Webアプリケーションの起動確認
 
-### 1. IntelliJの実行
+以下手順に従い、動作確認を行ってください。  
+なお、画面キャプチャ内の「tiscon8-pre」は「tiscon8」に読み替えてください。
 
-インストールするとデスクトップにショートカットが作成されますので起動してください。<br>
-ショートカットが無い場合、スタートメニューのプログラム一覧から起動してください。<br>
- `JetBrains` > `IntelliJ IDEA Community Edition`
+1. [GitHubリポジトリのFork](#1githubリポジトリのfork)
+1. [Gitpodのログイン](#2gitpodのログイン)
+1. [Workspaceの作成](#3workspaceの作成)
+1. [Webアプリケーションの起動確認](#4webアプリケーションの起動確認)
+1. [Webアプリケーションの終了](#5webアプリケーションの終了)
 
-起動中は下記のような画面が表示されます。<br>
-![起動中](../image/intelliJ_Loading.png)
+## 構成図
 
-起動が完了すると下記のような画面が表示されます。<br>
-![起動後](../image/intelliJ_welcome.png)
+本手順によって構築される環境の概念図は以下のようになります。
 
-### 2. IntelliJでプロジェクトをcloneする
+![](../image/diagram.png)
 
-1.  `Get from VCS` を選択します。
-1. URLに `https://github.com/tiscon/tiscon7.git` を入力します。<br>
-Directoryには自動で`C:\Users\[ユーザ名]\IdeaProjects\tiscon7`が設定されます。<br>
-![クローン](../image/intelliJ_cloneRepository.png)
-1. Cloneボタンを押下します。
-1. 画面にステータスが表示されます。バーの表示が消えればcloneは完了です。<br>
- 
- #### (閉じてしまったプロジェクトを開く方法)
-1. IntellijのWelcome画面の Open を選択します。<br>
-![プロジェクトを開く1](../image/intelliJ_welcome_open.png)
+### 1.GitHubリポジトリのFork
 
-1. `C:\Users\ユーザ名\IdeaProjects\tiscon7` を選択し、OKを押します。<br>
-![プロジェクトを開く2](../image/intellij_top_open_project.png)
+1. 以下を押下し、インターンシップ向けアプリにアクセスして下さい。  
+   1. https://github.com/tiscon/tiscon8
+1. GitHubの画面右上 `Fork` ボタンを押下します。  
+![Fork button](../image/git_fork-button.png)
+1. `Create Fork` を押下します。画面が切り替わります。  
+![Fork](../image/git_fork.png)
 
-1. tiscon7プロジェクトが開けました。<br>
-![プロジェクトを開く3](../image/intellij_open.png)
+1. 画面左上で [自分のGitHubユーザ名]/tiscon8 となっていればOKです。  
+![Confirm fork](../image/git_confirm-fork.png)
 
-### 3. ソースコード確認
+1. `Code` を押下します。  
+![Codeの選択](../image/git_click-code.png)
 
-1. IntelliJ上部メニューバーから、`View > Tool Windows > Project` を選択します。<br>
-![ProjectViewの表示](../image/intellij_open_project.png)
+1. 図のクリックボードアイコンを押下し、URLをコピーします。  
+![Copy url](../image/git_copy-url.png)
 
-1. Project Viewよりプロジェクト内のソースコードが確認できるようになりました。<br>
-![ソースコードの確認](../image/intellij_project-window.png)
+### 2.Gitpodのログイン
 
-1. 以下のようにpom.xmlに「m」というマークがついていない場合以下の手順4.と5.を実行してください。<br>  
-![認識されていないpom](../image/intelliJ_not_maven_pom.png)
+1. 以下にアクセスし、 `Continue with GitHub` を押下します。
+   1. https://gitpod.io/login  
+![Login Gitpod](../image/gitpod_access.png)
+1. GitHubへのログインやアクセス権の付与を求められた場合は、従ってください。
+![Authorize gitpod.io](../image/gitpod_authorize-gitpodio.png)
+1. エディターの選択画面が出るので、 `continue` を押下します。
+![Select editor](../image/gitpod_select-editor.png)
 
-1. [pom.xml]で右クリックをし、[＋ Add as Maven Project]をクリックしてください。<br>
-![mavenとして追加](../image/intellJ_add_as_maven.png)
+### 3.Workspaceの作成
 
-1. pom.xmlに「m」というマークがつきました。<br>
-![認識されたpom](../image/intelliJ_maven_pom.png)
+1. 「Workspaces」画面に遷移します。 
+1. `New Workspace` を押下し、手順1-6 でコピーしたURLを入力し、選択します。  
+![New Workspace](../image/gitpod_new-workspace.png)
+1. 電話番号の入力を求められます。インターンシップ当日に利用可能な電話番号を入力し、`Send Code via SMS` を押下します。
+![Register Phone Number](../image/gitpod_register-phone-number.png)
+1. 届いたSMSに記載されている認証コードを入力し、 `Validate Account` を押下します。
+1. 以下のような画面となったら、 `continue` を押下します。  
+![Validation Successful](../image/gitpod_validation-successful.png)
+1. 起動が完了するまで1,2分程度待ちます。  
+![Starting](../image/gitpod_starting.png)
+1. このような画面が出たらOKです。プロジェクト内のソースコードが確認できるようになりました。  
+![Started](../image/gitpod_started.png)
 
-### 4. [Git](https://git-scm.com/)の設定
+### 4.Webアプリケーションの起動確認
 
-今後の作業内容をあなたのGitHubアカウントに紐付けられるようにします。
+1. 画面下部のTerminal画面に `Started InternApplication` と表示されていることを確認します。異なる表示がされている場合は、次の手順に進んでください。
+![Confirm Boot](../image/gitpod_confirm-boot.png)
+   1. 以下のように `ZipException` と表示されている場合は以下手順に従ってください。異なる表示がされている場合は、問い合わせ手順に従ってご連絡ください。
+![ZipException](../image/gitpod_zip-exception.png)
+   1.  Terminalの一番下に `./mvnw spring-boot:run` と入力し、Enterキーを押下します。
+![Command before](../image/gitpod_command-before.png)
+![Command after](../image/gitpod_command-after.png)
+   1. 画面下部のTerminal画面に `Started InternApplication` と表示されていればOKです。
+1. 画面右下 `Open Browser` を押下し、ブラウザを開いて画面が表示されることを確認します。  
+![Open Browser](../image/gitpod_open-browser.png)
+1. 通知が消えてしまっている場合は、右下のベルマークを押下すると再度表示されます。  
+![Open Notifications](../image/gitpod_open-notifications.png)
+1. 以下のような画面が立ち上がったらOKです。  
+![Application](../image/tiscon8_prior_confirmation.png)
 
-1. IntelliJ上部メニューバーから、`View > Tool Windows > Terminal` を選択します。<br>
-![Terminalの表示1](../image/intellij_open_terminal.png)
+### 5.Webアプリケーションの終了
 
-1. 画面下部にTerminal画面が表示されるので、以下を入力してください。<br>
-![Terminalの表示2](../image/intellij_opened_terminal.png)
+動作が確認できたらアプリケーションを終了しましょう。  
 
-```sh
-git config user.name GitHubのユーザ名
-git config user.email GitHubのメールアドレス
-```
-コマンド実行後、何もエラーメッセージが表示されなければ設定完了です。
+1. Gitpod画面左下の `Gitpod` を押下します。  
+![Editing](../image/gitpod_editing.png)
+1. 画面上部に表示された `Gitpod: Stop Workspace` を押下します。  
+![Stop Workspace](../image/gitpod_stop-workspace.png)
+1. Workspaceの停止を知らせる画面が表示されればOKです。  
+![Stopped Workspace](../image/gitpod_stopped-workspace.png)
 
-## 5. SDKの設定
+### もう一度起動したい場合
 
-1. IntelliJ上部メニューバーから、 `File` > `Project Structure...` を選択します。<br>
-![SDK設定1](../image/intellij_project-structure.png)
+`Go To Dashbord` を押下すると、Workspace一覧が表示されます。  
+対象のWorkspace右の `縦三点リーダー > Open` から起動できます。
 
-1. [Project SDK]という見出しの下にあるプルダウンが＜No SDK＞になっていると思いますので、【Add SDK】→【JDK】を選択してください。<br>
-なお、＜No SDK＞とある箇所のプルダウンにすでに【11(java version "11.0.9")】がある場合はそれを選択してください。
-![SDK設定2](../image/intellij_setting_jdk1.png)
+![Reopen At Workspaces](../image/gitpod_reopen-at-workspaces.png)
 
-1. （【temurin-11】を選択した場合はこの手順は不要です。）
-ご自身がインストールしたjdkの場所(C:\Program Files\AdoptOpenJDK\jdk-11.0.13.8-hotspot)を選択して[OK]を押下してください。<br>
-![SDK設定3](../image/intellij_setting_jdk1_select-home-directory.png)
+ただし、Workspace作成後２週間経過すると自動的に削除されてしまいます。  
+その場合は、手順3「Workspaceの作成」を再度実施していただくことで、再度確認できます。
 
-1. Project SDKが設定され、【temurin-11】が選択されるかと思います。
-一つ下の項目「Project language level」は「SDK default」を選択してください。<br>
-![SDK設定4](../image/intellij_setting_jdk2.png)
+__※Workspaceの起動時間には50h/monthの制限があります。__  
+__インターンシップ当日に利用できるようにするため、15時間以上残してください。__
 
-1. [Project SDK]と[Project language level]の設定が完了したら、『OK』を選択してください。<br>
-![SDK設定5](../image/intellij_setting_jdk3.png)
+「何時間くらい使ったの？」と気になる方は、 `画面右上のアカウントアイコン > Settings > Plans` から残り利用可能時間が確認できます。
 
-### 6. Webアプリケーションの起動確認
+![Remaining](../image/gitpod_remaining.png)
 
-cloneしたWebアプリケーションが正常に動くか、開発ローカル(自PC)上で動作確認を行います。
-
-##### 1. アプリケーションを起動前に準備する
-
-Mavenコマンドを実行するため、下図のように `View > Tool Windows > Maven` を選択して、ダイアログを開き、以下のコマンドを実行します。
-![mavenの表示](../image/intellij_open_maven.png)
-
-開いたMavenメニューより青色四角内の[m]マークを選択して、ダイアログを開きます。
-![mavenが表示された](../image/intellij_opened_maven.png)
-
-ダイアログが表示できました。
-![ダイアログの表示](../image/intellij_opened_command.png)
-
-開いたダイアログに下記コマンドを入力します。<br/>
-```text
-mvn clean compile
-```
-  
-この時に元々ダイアログに書かれていた `mvn` は消さないよう注意してください。<br/>
-最後にEnterキーを押しコマンドを実行します。
-![ダイアログへの入力](../image/intellij_input_command.png)
-
-実行して、下記のように「BUILD SUCCESS」と表示されれば成功です。<br/>
-![実行結果](../image/intellij_maven_result.png)
-
-##### 2. アプリケーションを起動する
- `src/main/java/com.tiscon/InternApplication` の上で右クリックをし、 `▶ Run 'InternApplicat....main()'`をクリックしてください。
-
- ![アプリケーション起動](../image/intellij_run_main.png)
-
- なお、初回起動時にはWindowsセキュリティの警告がされる場合がありますが、[アクセスを許可する]をクリックしてください。
-
- ![Windowsセキュリティの警告](../image/warn_security.png)
-
-##### 3. ブラウザで画面表示を確認する
-以下のURLをクリックし、ブラウザを開いて画面が表示されることを確認します。
-
-http://localhost:9080/
-
-![画面表示](../image/tiscon7_prior_confirmation.png)
-
-##### 4. アプリケーションを終了する
-動作が確認できたらアプリケーションを終了しましょう。<br>
-Runの`internApplication`のタブを開いた状態で左の停止(赤四角)ボタンを押します。
-
-![Main実行4](../image/intellij_stop_application-main.png)
-
-#### お疲れ様でした！
+__お疲れ様でした！次は事前学習へ進んでください。__

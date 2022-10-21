@@ -1,10 +1,20 @@
 # 作業に行き詰った場合
 
-環境構築中に分からないことがあったら、まずは[QA一覧](QA.md)を参考にしてみてください。
+環境構築中に分からないことがあったり、自身で調べても上手くいかない場合は、下記のテンプレートを用いてメールにて質問してください。  
+何が上手くいっていないかわからない、などの場合も一度スクリーンショットと環境構築手順書のどの手順で分からなくなったのかを教えてください。  
 
-上記ページを見ても解決せず、自身で調べても上手くいかない場合は、下記のテンプレートを用いてメールにて質問してください。
-何が上手くいっていないかわからない、などの場合も一度スクリーンショットと環境構築手順書のどの手順で分からなくなったのかを教えてください。
-内容に応じてメールもしくは電話でサポートします。
+内容に応じてメールもしくは電話やZoomでサポートします。
+
+## 連絡先
+
+tiscon@ml.tis.co.jp
+
+## 対応可能時間
+
+平日9:00～17:30
+
+営業中のみの対応となります。  
+繰り返しとなりますが、余裕をもってご準備ください。
 
 ## テンプレート
 
@@ -41,36 +51,54 @@ TIS チーム開発コース インターンシップ 担当者様
 メールアドレス：
 　tiscon@ml.tis.co.jp
 件名：
-　intelliJの日本語化が上手くいきません。
+　Webアプリケーションの起動が上手くいきません。
 本文：
 TIS チーム開発コース インターンシップ 担当者様
 
 TIS大学の奈部 楽太郎です。
 
-1/23(土)、24(日)のインターンシップ参加に向けて、環境構築を行っていますが
-環境構築手順書の[IntelliJ IDEA 日本語化]のサイトに記載してある
-通りに作業をしたのですが、日本語化が上手くできません。
+12/3(土)、4(日)のインターンシップ参加に向けて、環境構築を行っています。
+環境構築手順書の[4.Webアプリケーションの起動確認]に記載してある
+通りに作業をしたのですが、起動が確認できません。
 
 【作業状況】
-参照先の手順はすべて実施したのですが、自分のPCに以下のフォルダが見つからず、
-自分で新規フォルダを作成したのですが、うまく動きません。
+[3.Workspaceの作成]までの手順はすべて実施し、問題ありません。
+その後手順4-1に従いTerminal画面を確認したところ、「Started InternApplication」 と表示されず、うまく動きません。
 
-サイトに書いてあるフォルダ名(この通りに新規のフォルダを作成しました)
-C:\Program Files (x86)\JetBrains\IntelliJ IDEA Community Edition 14.1.4\lib
+・期待している動き
+Terminalにて「Started InternApplication in ...」という表示がされること
 
-私のPCにできていたフォルダ名
-C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 14.1.4\lib
+・現在の動き
+Terminalにて、以下のように表示がされてしまいます。
+
+Exception in thread "main" java.util.zip.XXXException: xxx not found
+	at java.base/java.util.zip.ZipFile$Source.zerror(ZipFile.java:1581)
+	at java.base/java.util.zip.ZipFile$Source.findEND(ZipFile.java:1476)
+	at org.gradle.wrapper.Install.unzip(Install.java:214)
+	at org.gradle.wrapper.Install.access$600(Install.java:27)
+	at org.gradle.wrapper.Install$1.call(Install.java:74)
+	at org.gradle.wrapper.Install$1.call(Install.java:48)
+	at org.gradle.wrapper.ExclusiveFileAccessManager.access(ExclusiveFileAccessManager.java:65)
+	at org.gradle.wrapper.Install.createDist(Install.java:48)
+	at org.gradle.wrapper.WrapperExecutor.execute(WrapperExecutor.java:128)
+	at org.gradle.wrapper.GradleWrapperMain.main(GradleWrapperMain.java:61)
+Exception: Gradle task assembleDebug failed with exit code 1
+
 
 【環境情報】
 Windows10 64bit
 
 【問題】
-なぜか日本語化されていない。
-何も変わっていないように見える。
+なぜか正常に起動ができない。
+「XXXException」と表示されている。
 
 【連絡先】
 0X0-XXXX-XXXX
-15時以降であれば何時でも大丈夫です。
+
+対応可能な時間は以下の通りです。
+
+・○○日：14時以降であれば何時でも大丈夫です
+・○○日：16時～18時
 
 以上です、ご返答の程お願いいたします。
 ```
