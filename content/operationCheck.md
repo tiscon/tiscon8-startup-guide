@@ -3,7 +3,7 @@
 ## 手順
 
 以下手順に従い、動作確認を行ってください。  
-なお、画面キャプチャ内の「tiscon8-pre」は「tiscon8」に読み替えてください。
+なお、一部画面キャプチャ内にある「tiscon8-pre」は「tiscon8」に読み替えてください。
 
 1. [GitHubリポジトリのFork](#1githubリポジトリのfork)
 1. [Gitpodのログイン](#2gitpodのログイン)
@@ -50,26 +50,49 @@
 1. 「Workspaces」画面に遷移します。 
 1. `New Workspace` を押下し、手順1-6 でコピーしたURLを入力し、選択します。  
 ![New Workspace](../image/gitpod_new-workspace.png)
-1. 電話番号の入力を求められます。インターンシップ当日に利用可能な電話番号を入力し、`Send Code via SMS` を押下します。
+1. 電話番号の入力を求められることがあります。その場合はインターンシップ当日に利用可能な電話番号を入力し、`Send Code via SMS` を押下します。
 ![Register Phone Number](../image/gitpod_register-phone-number.png)
-1. 届いたSMSに記載されている認証コードを入力し、 `Validate Account` を押下します。
+1. 電話番号を入力した場合は、届いたSMSに記載されている認証コードを入力し、 `Validate Account` を押下します。
 1. 以下のような画面となったら、 `continue` を押下します。  
 ![Validation Successful](../image/gitpod_validation-successful.png)
 1. 起動が完了するまで1,2分程度待ちます。  
 ![Starting](../image/gitpod_starting.png)
-1. このような画面が出たらOKです。プロジェクト内のソースコードが確認できるようになりました。  
+1. 以下のような画面に遷移し、プロジェクト内のソースコードが確認できるようになりました。　※時刻が深夜となっていますが、時差により9時間ズレが生じるためです。
 ![Started](../image/gitpod_started.png)
+
+
+画面下部の以下部分を「Terminal」と呼びます。  
+文字（コマンド）を打つことで、コンピュータに指示ができ、アプリケーションの起動などをすることができます。
+![Terminal](../image/gitpod_terminal.png)
 
 ### 4.Webアプリケーションの起動確認
 
-1. 画面下部のTerminal画面に `Started InternApplication` と表示されていることを確認します。異なる表示がされている場合は、次の手順に進んでください。
-![Confirm Boot](../image/gitpod_confirm-boot.png)
-   1. 以下のように `ZipException` と表示されている場合は以下手順に従ってください。異なる表示がされている場合は、問い合わせ手順に従ってご連絡ください。
-![ZipException](../image/gitpod_zip-exception.png)
-   1.  Terminalの一番下に `./mvnw spring-boot:run` と入力し、Enterキーを押下します。
+1. まずは、Terminalの下部に緑色の文字で「BUILD SUCCESS」という表示が出ていることを確認します。異なる表示の場合は、後続の手順に従ってください。  
+![Started](../image/gitpod_success.png)
+
+#### 異なる表示がされている場合
+
+1. 以下のようにTerminalに「Permission denied」と表示されている場合は、次の手順に従ってください。「Permission denied」や「BUILD SUCCESS」以外の表示の場合は、問い合わせ手順に従ってください。
+![Permission Denied](../image/gitpod_permission-denied.png)
+1. Terminalの一番下にコマンドを入力していきます。
 ![Command before](../image/gitpod_command-before.png)
-![Command after](../image/gitpod_command-after.png)
-   1. 画面下部のTerminal画面に `Started InternApplication` と表示されていればOKです。
+1. `chmod 755 mvnw` と入力し、Enterキーを押下します。以下のようになっていれば無事成功です。
+![Chmod mvnw](../image/gitpod_chmod.png)
+
+成功していれば、後続の手順に進んでください。
+
+#### 「BUILD SUCCESS」と表示されている場合
+
+1. Terminalの一番下にコマンドを入力していきます。
+![Command before](../image/gitpod_command-before.png)
+1. `mvn install` と入力し、Enterキーを押下します。
+![Command Mvn Install](../image/gitpod_command-mvn-install.png)
+1. 緑色の文字で「BUILD SUCCESS」という表示が出ていればOKです。
+![Command Install Success](../image/gitpod_command-mvn-install-success.png)
+1. 次に `mvn spring-boot:run` と入力し、Enterキーを押下します。
+![Command Run](../image/gitpod_command-run.png)
+1. `Started InternApplication` と表示されていればOKです。
+![Confirm Boot](../image/gitpod_confirm-boot.png)
 1. 画面右下 `Open Browser` を押下し、ブラウザを開いて画面が表示されることを確認します。  
 ![Open Browser](../image/gitpod_open-browser.png)
 1. 通知が消えてしまっている場合は、右下のベルマークを押下すると再度表示されます。  
@@ -91,11 +114,14 @@
 ### もう一度起動したい場合
 
 `Go To Dashbord` を押下すると、Workspace一覧が表示されます。  
-対象のWorkspace右の `縦三点リーダー > Open` から起動できます。
+対象のWorkspace右の `縦三点リーダー > Open` からWorkspaceを起動できます。
 
 ![Reopen At Workspaces](../image/gitpod_reopen-at-workspaces.png)
 
-ただし、Workspace作成後２週間経過すると自動的に削除されてしまいます。  
+Terminalが表示されたら、 `mvn spring-boot:run` と入力し、Enterキーを押下することで起動することができます。
+![Command Run](../image/gitpod_command-run.png)
+
+ただし、Workspace作成後２週間経過するとWorkspaceは自動的に削除されてしまいます。  
 その場合は、手順3「Workspaceの作成」を再度実施していただくことで、再度確認できます。
 
 __※Workspaceの起動時間には50h/monthの制限があります。__  
