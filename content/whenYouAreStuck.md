@@ -63,10 +63,10 @@ TIS大学の奈部 楽太郎です。
 
 【作業状況】
 [3.Workspaceの作成]までの手順はすべて実施し、問題ありません。
-その後手順4-1に従いTerminal画面を確認したところ、「Started InternApplication」 と表示されず、うまく動きません。
+その後手順4-1に従いTerminal画面を確認したところ、「BUILD SUCCESS」 と表示されず、うまく動きません。
 
 ・期待している動き
-Terminalにて「Started InternApplication in ...」という表示がされること
+Terminalにて「BUILD SUCCESS」という表示がされること
 
 ・現在の動き
 Terminalにて、以下のように表示がされてしまいます。
