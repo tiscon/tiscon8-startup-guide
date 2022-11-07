@@ -57,12 +57,12 @@
 ![Validation Successful](../image/gitpod_validation-successful.png)
 1. 起動が完了するまで1,2分程度待ちます。  
 ![Starting](../image/gitpod_starting.png)
-1. 以下のような画面に遷移し、プロジェクト内のソースコードが確認できるようになりました。　※時刻が深夜となっていますが、時差により9時間ズレが生じるためです。
+1. 以下のような画面に遷移し、プロジェクト内のソースコードが確認できるようになりました。　※時刻が深夜となっていますが、時差により9時間ズレが生じるためです。  
 ![Started](../image/gitpod_started.png)
 
 
 画面下部の以下部分を「Terminal」と呼びます。  
-文字（コマンド）を打つことで、コンピュータに指示ができ、アプリケーションの起動などをすることができます。
+文字（コマンド）を打つことで、コンピュータに指示ができ、アプリケーションの起動などをすることができます。  
 ![Terminal](../image/gitpod_terminal.png)
 
 ### 4.Webアプリケーションの起動確認
@@ -72,26 +72,26 @@
 
 #### 異なる表示がされている場合
 
-1. 以下のようにTerminalに「Permission denied」と表示されている場合は、次の手順に従ってください。「Permission denied」や「BUILD SUCCESS」以外の表示の場合は、問い合わせ手順に従ってください。
+1. 以下のようにTerminalに「Permission denied」と表示されている場合は、次の手順に従ってください。「Permission denied」や「BUILD SUCCESS」以外の表示の場合は、問い合わせ手順に従ってください。  
 ![Permission Denied](../image/gitpod_permission-denied.png)
-1. Terminalの一番下にコマンドを入力していきます。
+1. Terminalの一番下にコマンドを入力していきます。  
 ![Command before](../image/gitpod_command-before.png)
-1. `chmod 755 mvnw` と入力し、Enterキーを押下します。以下のようになっていれば無事成功です。
+1. `chmod 755 mvnw` と入力し、Enterキーを押下します。以下のようになっていれば無事成功です。  
 ![Chmod mvnw](../image/gitpod_chmod.png)
 
 成功していれば、後続の手順に進んでください。
 
 #### 「BUILD SUCCESS」と表示されている場合
 
-1. Terminalの一番下にコマンドを入力していきます。
+1. Terminalの一番下にコマンドを入力していきます。  
 ![Command before](../image/gitpod_command-before.png)
-1. `mvn install` と入力し、Enterキーを押下します。
+1. `mvn install` と入力し、Enterキーを押下します。  
 ![Command Mvn Install](../image/gitpod_command-mvn-install.png)
-1. 緑色の文字で「BUILD SUCCESS」という表示が出ていればOKです。
+1. 緑色の文字で「BUILD SUCCESS」という表示が出ていればOKです。  
 ![Command Install Success](../image/gitpod_command-mvn-install-success.png)
-1. 次に `mvn spring-boot:run` と入力し、Enterキーを押下します。
+1. 次に `mvn spring-boot:run` と入力し、Enterキーを押下します。  
 ![Command Run](../image/gitpod_command-run.png)
-1. `Started InternApplication` と表示されていればOKです。
+1. `Started InternApplication` と表示されていればOKです。  
 ![Confirm Boot](../image/gitpod_confirm-boot.png)
 1. 画面右下 `Open Browser` を押下し、ブラウザを開いて画面が表示されることを確認します。  
 ![Open Browser](../image/gitpod_open-browser.png)
@@ -118,7 +118,7 @@
 
 ![Reopen At Workspaces](../image/gitpod_reopen-at-workspaces.png)
 
-Terminalが表示されたら、 `mvn spring-boot:run` と入力し、Enterキーを押下することで起動することができます。
+Terminalが表示されたら、 `mvn spring-boot:run` と入力し、Enterキーを押下することで起動することができます。  
 ![Command Run](../image/gitpod_command-run.png)
 
 ただし、Workspace作成後２週間経過するとWorkspaceは自動的に削除されてしまいます。  
