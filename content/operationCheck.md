@@ -50,7 +50,7 @@
 1. 「Workspaces」画面に遷移します。 
 1. `New Workspace` を押下し、手順1-6 でコピーしたURLを入力し、選択します。  
 ![New Workspace](../image/gitpod_new-workspace.png)
-1. 電話番号の入力を求められることがあります。その場合はインターンシップ当日に利用可能な電話番号を入力し、`Send Code via SMS` を押下します。
+1. 電話番号の入力を求められることがあります。その場合はインターンシップ当日に利用可能な電話番号を入力し、`Send Code via SMS` を押下します。  
 ![Register Phone Number](../image/gitpod_register-phone-number.png)
 1. 電話番号を入力した場合は、届いたSMSに記載されている認証コードを入力し、 `Validate Account` を押下します。
 1. 以下のような画面となったら、 `continue` を押下します。  
